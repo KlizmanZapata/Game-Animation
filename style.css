@@ -1,0 +1,417 @@
+:root {
+    --dark-brown: #a54a38;
+    --light-brown: #bf624c;
+    --dark-green: #51af5e;
+    --light-green: #51af5e;
+    --shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+/*Contexto_Ampliamento*/
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    counter-reset: score;
+}
+
+.phone{
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    background: #ccefff;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 80px;
+    z-index: 2;
+  }
+
+  input[type=checkbox]:focus {
+    appearance: none;
+    outline: none;
+  }
+
+  input:checked {
+    counter-increment: score;
+  }
+
+  .score::after {
+    content: counter(score);
+  }
+
+  @keyframes bunny {
+    0% {
+      top: 0;
+    }
+    25% {
+      top: 80px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  @keyframes layer {
+    0% {
+      bottom: 0;
+    }
+    25% {
+      bottom: -80px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+  
+/*Bunny 1*/
+.layer-1{
+    position: absolute;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.layer-1 input[type=checkbox]{
+    /* After 4 */
+    animation-name: bunny;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/*Bunny 2*/
+.layer-2{
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+
+    animation-name: layer;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.layer-2 input[type=checkbox] {
+    /* After 4 */
+    animation-name: bunny;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+/*Montaña 1*/
+.layer-3{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 400px;
+    width: 220px;
+    background: #bf624c;
+    bottom: 0;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+/*Bunny 3*/
+.layer-4{
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    bottom: 0;
+    left: 15px;
+
+    animation-name: layer;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.layer-4 input[type=checkbox] {
+    /* After 4 */
+    animation-name: bunny;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+/*Montaña 2*/
+.layer-5{
+    position: absolute;
+    z-index: 5;
+    height: 300px;
+    width: 200px;
+    background: #bf624c;
+    bottom: 0;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+/*Bunny 4*/
+.layer-6{
+    position: absolute;
+    z-index: 6;
+    height: 250px;
+    width: 80px;
+    bottom: 0;
+    right: 30px;
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.layer-6 input[type=checkbox] {
+    /* After 4 */
+    animation-name: bunny;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+/*Montaña 3*/
+.layer-7{
+    position: absolute;
+    z-index: 7;
+    height: 200px;
+    width: 150px;
+    background: #bf624c;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+.layer-8{
+    position: absolute;
+    z-index: 8;
+    height: 120px;
+    width: 200px;
+    margin: 0 auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.layer-9{
+    position: absolute;
+    z-index: 9;
+    height: 100px;
+    width: 120px;
+    bottom: 0;
+}
+.layer-10{
+    position: absolute;
+    z-index: 10;
+    height: 100px;
+    width: 120px;
+    bottom: 0;
+    right: 0;
+}
+
+.left-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+.left-ear--inner{
+    background: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}
+
+.right-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+.right-ear--inner{
+    background: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+}
+
+.head{
+    background: white;
+    border-radius: 50%;
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+}
+.head__eye{
+    background: black;
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    top: 15px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+    0%{
+        height: 4px;
+    }
+    5%{
+        transform: translate(0, 2px);
+        height: 1px;
+    }
+    10%{
+        transform: translate(0, 0px);
+        height: 4px;
+    }
+}
+
+.head__eye--left{
+    left: 30px;
+}
+.head__eye--right{
+    right: 30px;
+}
+
+.lawn{
+    background: var(--dark-green);
+    height: 20px;
+    width: 100%;
+}
+.land{
+    background: linear-gradient(135deg, var(--dark-green) 25%, transparent 25%) -50px 0, linear-gradient(-135deg, var(--dark-green) 25%, transparent 25%) -50px 0, linear-gradient(45deg, var(--light-brown) 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, var(--dark-brown) 25%);
+    background-size: 33px 30px;
+    height: 30px;
+    width: 100%;
+}
+
+/*Arbusto*/
+.layer-8__left-lawn{
+    background: var(--dark-green);
+    border-radius: 40px 40px 0 0;
+    display: inline-block;
+    height: 70%;
+    width: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.layer-8__center-lawn{
+    background: var(--dark-green);
+    border-radius: 40px 40px 0 0;
+    display: inline-block;
+    height: 100%;
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+}
+.layer-8__right-lawn{
+    background: var(--dark-green);
+    border-radius: 40px 40px 0 0;
+    display: inline-block;
+    height: 80%;
+    width: 80px;
+    position: absolute;
+    left: 130px;
+    bottom: 0;
+}
+
+/*Nubes*/
+.layer-9__left-cloud{
+    background: white;
+    border-radius: 40px 40px 0 0;
+    height: 100%;
+    width: 80px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+.layer-9__right-cloud{
+    background: white;
+    border-radius: 0 40px 30px 0;
+    height: 60%;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+}
+
+.layer-10__left-cloud{
+    background: white;
+    border-radius: 40px 0 0 30px;
+    height: 60%;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+}
+.layer-10__right-cloud{
+    background: white;
+    border-radius: 40px 40px 0 0;
+    height: 100%;
+    width: 80px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+/*Titulo*/
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 45px 0 10px;
+}
+.title img{
+    width: 60%;
+}
+
+.score{
+    color: var(--light-brown);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
